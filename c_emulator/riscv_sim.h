@@ -425,11 +425,6 @@ static int process_args(int argc, char **argv)
 #ifdef RVFI_DII
   if (optind > argc || (optind == argc && !rvfi_dii))
     print_usage(argv[0], 0);
-#else
-  if (optind >= argc) {
-    fprintf(stderr, "No elf file provided.\n");
-    print_usage(argv[0], 0);
-  }
 #endif
   if (dtb_file)
     read_dtb(dtb_file);
@@ -602,11 +597,8 @@ void init_sail_reset_vector(uint64_t entry)
   }
 #endif
 
-  /* zero-fill to page boundary */
   const int align = 0x1000;
   uint64_t rom_end = (addr + align - 1) / align * align;
-  for (int i = addr; i < rom_end; i++)
-    write_mem(addr++, 0);
 
   /* set rom size */
   rv_rom_size = rom_end - rv_rom_base;
@@ -980,13 +972,11 @@ void run_sail(void)
 #endif
     { /* run a Sail step */
       sail_int sail_step;
-      CREATE(sail_int)(&sail_step);
-      CONVERT_OF(sail_int, mach_int)(&sail_step, step_no);
+      sail_step = CONVERT_OF(sail_int, mach_int)(step_no);
       stepped = zstep(sail_step);
       if (have_exception)
         goto step_exception;
       flush_logs();
-      KILL(sail_int)(&sail_step);
     }
     if (stepped) {
       step_no++;
