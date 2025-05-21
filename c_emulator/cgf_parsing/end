@@ -1,0 +1,19 @@
+  
+  uint32_t entry = 0x1100;
+
+  for (size_t i = 0; i < sizeof(inst_buf); ++i)
+    write_mem(entry+i, (uint64_t)((char*)inst_buf)[i]);
+
+  init_sail(entry);
+
+  if (!init_check(s))
+    finish(1);
+
+  do {
+    run_sail();
+  } while (0);
+
+  model_fini();
+  flush_logs();
+  close_logs();
+}  

@@ -1,0 +1,14 @@
+#include "riscv_codegen.h"
+#include "klee/klee.h"
+#include "riscv_sim.h"
+#include "rts.h"
+#include <math.h>
+
+int main()
+{
+  set_config_print("all", false);
+
+  preinit_sail();
+  init_logs();
+
+  uint32_t inst_buf[500];
