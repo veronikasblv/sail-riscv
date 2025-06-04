@@ -1,0 +1,8 @@
+add:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      add: 0
+    val_comb:
+      'rs1_val % 2 == 1': 0
+      'rs2_val % 2 == 0': 0

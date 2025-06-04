@@ -1,0 +1,5 @@
+cross:
+    config: 
+      - check ISA:=regex(.*I.*)
+    cross_comb:
+      '[? : ? : ? : ? ] :: [? : ? : ? : ?] :: [? : ? : ? : ?]': 0

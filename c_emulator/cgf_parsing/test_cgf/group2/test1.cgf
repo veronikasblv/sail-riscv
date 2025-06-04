@@ -1,0 +1,17 @@
+add:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      add: 0
+    rs1:
+      x5: 0
+      x13: 0
+      x2: 0
+    rs2:
+      x5: 0
+      x13: 0
+      x2: 0
+    rd:
+      x5: 0
+      x13: 0
+      x2: 0

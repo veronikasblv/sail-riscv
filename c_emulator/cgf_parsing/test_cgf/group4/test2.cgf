@@ -1,0 +1,230 @@
+# For Licence details look at https://github.com/riscv-software-src/riscv-ctg/-/blob/master/LICENSE.incore
+
+fence:
+  config: 
+    - check ISA:=regex(.*I.*)
+  mnemonics: 
+    fence.i: 0
+
+addi:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      addi: 0
+
+slti:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      slti: 0
+
+sltiu:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      sltiu: 0
+
+andi:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      andi: 0
+
+ori:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      ori: 0
+
+xori:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      xori: 0
+
+slli:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      slli: 0
+
+srai:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      srai: 0
+
+srli:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      srli: 0
+
+add:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      add: 0
+
+sub:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      sub: 0
+
+slt:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      slt: 0
+
+sltu:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      sltu: 0
+
+and:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      and: 0
+
+or:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      or: 0
+
+xor:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      xor: 0
+
+sll:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      sll: 0
+
+srl:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      srl: 0
+
+sra:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      sra: 0
+
+beq:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      beq: 0
+
+bge:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      bge: 0
+
+bgeu:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      bgeu: 0
+
+blt:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      blt: 0
+
+bltu:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      bltu: 0
+
+bne:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      bne: 0
+
+lhu-align:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      lhu: 0
+
+lh-align:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      lh: 0
+
+lbu-align:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      lbu: 0
+
+lb-align:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      lb: 0
+
+lw-align:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      lw: 0
+
+
+sh-align:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      sh: 0
+
+sb-align:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      sb: 0
+
+sw-align:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      sw: 0
+
+auipc:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      auipc: 0
+
+lui:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      lui: 0
+
+jal:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      jal: 0
+
+jalr:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      jalr: 0

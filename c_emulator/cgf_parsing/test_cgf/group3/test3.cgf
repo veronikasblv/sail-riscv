@@ -1,0 +1,5 @@
+cross:
+    config: 
+      - check ISA:=regex(.*I.*)
+    cross_comb:
+      '[? : ? : ? : ? : ? : ?] :: [ ? : a=rd : ? : b=rd : ? : ?] :: [? : ? : (rs1==a or rs2==a) and rs1 != rs2 : ? : rs1==b : rs1==a]': 0

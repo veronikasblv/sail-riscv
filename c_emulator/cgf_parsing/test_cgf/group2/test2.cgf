@@ -1,0 +1,7 @@
+add:
+    config: 
+      - check ISA:=regex(.*I.*)
+    mnemonics: 
+      add: 0
+    op_comb: 
+      'rs1 != rs2  and rs1 != rd and rs2 != rd': 0
